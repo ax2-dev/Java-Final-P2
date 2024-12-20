@@ -18,16 +18,24 @@ class anaData {
     }
 
     private static int binarySearchByID(game[] games, String id, int first, int last) {
-        if (first > last) return -1;
-
+        if (first > last){
+            return -1;
+        }
         int mid = (first + last) / 2;
-        if (games[mid] == null) return -1;
-
+        if (games[mid] == null){
+            return -1;
+        }
         int comparison = games[mid].id.compareTo(id);
 
-        if (comparison == 0) return mid;
-        else if (comparison > 0) return binarySearchByID(games, id, first, mid - 1);
-        else return binarySearchByID(games, id, mid + 1, last);
+        if (comparison == 0){
+            return mid;
+        }
+        else if (comparison > 0){
+            return binarySearchByID(games, id, first, mid - 1);
+        }
+        else{
+            return binarySearchByID(games, id, mid + 1, last);
+        }
     }
 
     public static void sortGamesByValue(game[] games) {

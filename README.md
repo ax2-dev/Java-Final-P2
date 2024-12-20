@@ -35,6 +35,9 @@ This project is a Java app designed to analyze input list of video games (both t
 7. **Abstract Method**
     - I made calcVal() abstract because I want all the child classes to have it but have to make their own implementation. This is because each of the categories of games has to calculate value differently so instead of making a base calculation I just make it extend the class and override the method. Also makes it very easy for someone to come along and implement their own game category.
         - Can be found in `game.java`
+8. **Dynamic Array Sizing**
+   - The games array is initially created with a size of 5. As the array is populated the arrays size will be increased to fit the rest of the data. It will double the arrays size if the current amount of entries is the same as the total entries the array allows then it will double the size.
+      - Found in `utils.java`
 ---
 
 
